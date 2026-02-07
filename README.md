@@ -1,10 +1,15 @@
 # swift-result-builders
 
-[![SwiftPM 6.2](https://img.shields.io/badge/swiftpm-6.2-ED523F.svg?style=flat)](https://swift.org/download/) ![Platforms](https://img.shields.io/badge/Platforms-iOS_13_|_macOS_10.15_|_Catalyst_|_tvOS_14_|_watchOS_7-ED523F.svg?style=flat) [![@capture_context](https://img.shields.io/badge/contact-@capture__context-1DA1F2.svg?style=flat&logo=twitter)](https://twitter.com/capture_context)
+[![CI](https://github.com/capturecontext/swift-result-builders/actions/workflows/ci.yml/badge.svg)](https://github.com/capturecontext/swift-result-builders/actions/workflows/ci.yml) [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fcapturecontext%2Fswift-result-builders%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/capturecontext/swift-result-builders) [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fcapturecontext%2Fswift-result-builders%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/capturecontext/swift-result-builders)
 
-## Products
+Set of general-purpose result builders written in swift
 
-- **[ArrayBuilder](./Sources/ArrayBuilder)**
+## Table of contents
+
+- [Usage](#usage)
+  - [ArrayBuilder](#arraybuilder)
+- [Installation](#installation)
+- [License](#license)
 
 
 ## Usage
@@ -67,28 +72,20 @@ See more examples in [`Tests`](./Tests/ArrayBuilderTests/ArrayBuilderTests.swift
 
 ### Basic
 
-You can add swift-result-builders to an Xcode project by adding it as a package dependency.
+You can add `swift-result-builders` to an Xcode project by adding it as a package dependency.
 
 1. From the **File** menu, select **Swift Packages › Add Package Dependency…**
 2. Enter [`"https://github.com/capturecontext/swift-result-builders"`](https://github.com/capturecontext/swift-result-builders) into the package repository URL text field
-3. Choose products you need to link them to your project.
+3. Choose products you need to link to your project.
 
 ### Recommended
 
-If you use SwiftPM for your project structure, add DeclarativeConfiguration to your package file.
+If you use SwiftPM for your project structure, add `swift-result-builders` dependency to your package file. 
 
 ```swift
 .package(
-	url: "git@github.com:capturecontext/swift-result-builders.git",
-	.upToNextMinor(from: "0.0.1")
-)
-```
-or via HTTPS
-
-```swift
-.package(
-	url: "https://github.com:capturecontext/swift-result-builders.git",
-	.upToNextMinor(from: "0.0.1")
+  url: "https://github.com/capturecontext/swift-result-builders.git", 
+  .upToNextMinor("0.0.2")
 )
 ```
 
@@ -96,8 +93,8 @@ Do not forget about target dependencies:
 
 ```swift
 .product(
-	name: "ArrayBuilder",
-	package: "swift-result-builders"
+  name: "<#Product#>", 
+  package: "swift-result-builders"
 )
 ```
 
